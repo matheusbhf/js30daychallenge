@@ -1,2 +1,4 @@
 # js30daychallenge
-WesBos JS Challenges
+'''
+I'm doing the 30day JS Vanilla challenges proposed by WesBos
+'''
