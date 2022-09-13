@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2 id="k-text" class="text">There's a secret code to unleash an ancient gray colored beast, try to write it:</h2>
+
+
+  <div>
+    <img id="k" src="./klaus.jpg" alt="">
+  </div>
+
+  <h1 id="found">You Found Mr Klaus! The cat beast !!!</h1>
+
+<script>
+
+const pressed = [];
+const codsecreto = "klaus";
+
+window.addEventListener("keyup", (e) => {
+  console.log(e.key);
+  pressed.push(e.key);
+  pressed.splice(-codsecreto.length -1, pressed.length -codsecreto.length);
+  if (pressed.join('').includes(codsecreto)) {
+  descobriu();
+  }
+  console.log(pressed);
+})
+
+function descobriu() {
+document.getElementById("k-text").style.display = "none";
+document.getElementById("found").style.display = "flex";
+document.getElementById("k").style.display = "inline";
+}
+
+</script>
+</body>
+</html>
